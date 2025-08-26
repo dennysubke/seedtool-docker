@@ -35,8 +35,10 @@ USER nextjs
 # Expose the port the app runs on (adjust if your app uses a different port)
 EXPOSE 3000
 
-# Define environment variable for production
+# Define environment variables
 ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=3000
 
 # Command to run the application
 # Using nodemon.json suggests development setup, but for production we'll use node directly
