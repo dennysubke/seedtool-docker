@@ -18,8 +18,8 @@ COPY libs/bitcoinjs-lib/package.json ./libs/bitcoinjs-lib/
 COPY libs/bs58check/package.json ./libs/bs58check/
 COPY libs/buffer/package.json ./libs/buffer/
 
-# Install dependencies
-RUN npm install --omit=dev
+# Install all dependencies (including dev dependencies as they may be needed for runtime)
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
